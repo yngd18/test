@@ -1,0 +1,40 @@
+header {
+    display: flex;
+    align-items: top;
+    /* メインビジュアル出来たらボーダー消す */
+    padding: 20px 50px;
+}
+
+.header-logo img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+}
+
+.header-right {
+    display: flex;
+    margin: 0 auto;
+}
+
+.header-right ul {
+    display: flex;
+    gap: 20px;
+    padding: 14px 50px;
+    border-radius: 25px;
+    background-color: white;
+
+}
+
+.header-right a {
+    color: transparent;
+    background: linear-gradient(to right, #315098 50%, #000 50%) 100%;
+    background-clip: text;
+    background-size: 200% 100%;
+    transition: background-position 0.3s;
+    /* margin: 10px; */
+}
+
+.header-right a:hover {
+    background-position: 0 100%;
+}

@@ -1,0 +1,43 @@
+.company {
+background-color: white;
+}
+
+.company h2 {
+    padding-top: 50px;
+    
+}
+
+.company-inner {
+    display: flex;
+    margin-top: 80px;
+    padding-bottom: 80px;
+
+}
+
+.company-inner dl {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.company-inner dt {
+    width: 25%;
+}
+
+.company-inner dd {
+    width: 75%;
+}
+
+
+.map {
+    width: 50%;
+}
+
+.map iframe {
+    max-width: 480px;
+    height: 250px;
+    border-radius: 15px;
+}
+
+.company-inner h3 {
+    font: 1.6rem normal;
+}

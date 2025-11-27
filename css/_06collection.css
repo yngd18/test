@@ -1,0 +1,98 @@
+@charset "UTF-8";
+
+body {
+    background-color: #F3F1EF;
+}
+
+.collection {
+    background: linear-gradient(to right, #D2F0D5, #6FB375);
+    padding-bottom: 80px;
+}
+
+.collection-slider img {
+    /* margin: 0 auto; */
+    border-radius: 15px;
+    box-shadow: 4px 4px 10px 4px rgba(0, 0, 0, 0.3);
+}
+
+.collection-slider {
+    margin-bottom: 80px;
+}
+
+.view-more-btn {
+    text-align: right;
+}
+
+.view-more-btn a {
+    position: relative;
+    margin-right: 15px;
+    padding: 19px 99px;
+    border-radius: 15px;
+    color: white;
+    background: linear-gradient(to right, #70B8EE, #497BA1);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.view-more-btn a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -180px;
+    width: 30px;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    opacity: 0;
+    transform: skewX(-25deg);
+}
+
+.view-more-btn a:hover::before {
+    animation: shineAnimation 0.5s ease-in-out 1;
+    /* 1回だけ */
+    opacity: 1;
+}
+
+@keyframes shineAnimation {
+
+    0% {
+        left: -80px;
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        left: 140%;
+        opacity: 0;
+    }
+
+}
+
+.wave-bottom {
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+@media (max-width: 768px) {
+
+.wrapper-collection {
+        /* ★修正1: max-widthを解除またはモバイルの最大幅に変更 */
+        max-width: 100%; /* または max-width: 768px; */
+        
+      
+        /* もし .wrapper にも max-width があれば、それも同様に解除が必要な場合があります */
+    }
+
+    .view-more-btn a {
+        padding: 6px 45px;
+        border-radius: 15px;
+        color: white;
+        background: linear-gradient(to right, #70B8EE, #497BA1);
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+
+
+}

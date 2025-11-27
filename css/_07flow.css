@@ -1,0 +1,168 @@
+@charset "UTF-8";
+
+.wrapper {
+    max-width: 954px;
+    margin: 0 auto;
+}
+
+.flow-inner {
+    display: flex;
+    gap: 70px;
+}
+
+.flow-item {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.flow-text {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.flow-text span {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+
+}
+
+.odd-number {
+    transform: translateX(-30%);
+}
+
+.even-number {
+    transform: translateX(25%);
+}
+
+.flow-items:nth-child(1) .flow-item:nth-child(1) {
+    animation: float1 4.5s ease-in-out infinite;
+}
+
+.flow-items:nth-child(1) .flow-item:nth-child(2) {
+    animation: float2 5.2s ease-in-out infinite 0.3s;
+}
+
+.flow-items:nth-child(2) .flow-item:nth-child(1) {
+    animation: float3 3.8s ease-in-out infinite 0.6s;
+}
+
+.flow-items:nth-child(2) .flow-item:nth-child(2) {
+    animation: float4 4.8s ease-in-out infinite 0.1s;
+}
+
+.flow-items:nth-child(3) .flow-item:nth-child(1) {
+    animation: float5 5.3s ease-in-out infinite 0.5s;
+}
+
+.flow-items:nth-child(3) .flow-item:nth-child(2) {
+    animation: float6 4.2s ease-in-out infinite 0.2s;
+}
+
+@keyframes float1 {
+    0% {
+        translate: 0 0;
+    }
+
+    50% {
+        translate: 0 -18px;
+    }
+
+    100% {
+        translate: 0 0;
+    }
+}
+
+@keyframes float2 {
+    0% {
+        translate: 0 0;
+    }
+
+    50% {
+        translate: 0 -30px;
+    }
+
+    100% {
+        translate: 0 0;
+    }
+}
+
+@keyframes float3 {
+    0% {
+        translate: 0 0;
+    }
+
+    50% {
+        translate: 0 -12px;
+    }
+
+    100% {
+        translate: 0 0;
+    }
+}
+
+@keyframes float4 {
+    0% {
+        translate: 0 0;
+    }
+
+    50% {
+        translate: 0 -25px;
+    }
+
+    100% {
+        translate: 0 0;
+    }
+}
+
+@keyframes float5 {
+    0% {
+        translate: 0 0;
+    }
+
+    50% {
+        translate: 0 -20px;
+    }
+
+    100% {
+        translate: 0 0;
+    }
+}
+
+@keyframes float6 {
+    0% {
+        translate: 0 0;
+    }
+
+    50% {
+        translate: 0 -28px;
+    }
+
+    100% {
+        translate: 0 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .wrapper {
+        padding-inline: 3%;
+    }
+
+    .flow-inner {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .odd-number {
+        transform: translateX(0);
+    }
+
+    .even-number {
+        transform: translateX(0);
+    }
+}

@@ -1,0 +1,81 @@
+.step_text {
+    text-align: center;
+}
+
+.step_text p {
+    padding-bottom: 20px;
+}
+
+.step_img {
+    display: flex;
+    justify-content: space-between;
+}
+
+.step_img img {
+    width: 190px;
+    margin-block: 40px;
+}
+
+.map-number{
+    width: 165px;
+}
+
+.step-map_img {
+    display: flex;
+    justify-content: space-between;
+    line-height: 0;
+    align-items: center;
+}
+
+.map-line {
+    height: 2px;
+    width: 100%;
+}
+
+
+.step-btn {
+    position: absolute;
+    right: 50%;
+    transform: translateY(50%);
+    transform: translateX(50%);
+    bottom: -100px;
+}
+
+#btn_animation .btn {
+    display: block;
+    width: 250px;
+    height: 40px;
+    font-size: 1.4rem;
+    line-height: 40px;
+    text-decoration: none;
+    background-color: #FFD60E;
+    color: white;
+    text-align: center;
+    border-radius: 78px;
+    animation: btn_animation 1s infinite;
+}
+
+.btn-inner {
+    position: relative;
+}
+
+
+@keyframes btn_animation {
+    0% {
+        transform: scale(1, 0.8);
+    }
+
+    20% {
+        transform: scale(0.8, 1.1);
+    }
+
+    95% {
+        transform: scale(1, 1);
+    }
+
+    100% {
+        transform: scale(1, 0.8);
+    }
+}
+
+

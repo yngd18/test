@@ -1,0 +1,64 @@
+footer {
+    background: white url(../img/footer.png);
+    background-size: cover;
+    height: 430px;
+}
+
+.footer-box {
+    display: flex;
+    position: relative;
+    text-align: center;
+}
+
+
+.footer-left {
+    width: 30%;
+}
+
+.footer-left ul {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.footer-left a {
+    max-width: 120px;
+}
+
+
+.footer-left img {
+    margin-block: 115px 36px;
+}
+
+.footer-right {
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+    text-align: center;
+}
+
+.footer-right p {
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    text-align: center;
+    column-gap: 20px;
+}
+
+.content-1,.content-2 {
+    padding-top: 20px;
+}
+
+.content-1 img,.content-2 img {
+    padding-bottom: 10px;
+}
+
+.copyright {
+    text-align: center;
+}
+
+.copyright small{
+    margin: 0;
+}
