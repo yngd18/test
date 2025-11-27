@@ -16,7 +16,7 @@
     margin-block: 40px;
 }
 
-.map-number{
+.map-number {
     width: 165px;
 }
 
@@ -78,4 +78,13 @@
     }
 }
 
+@media (max-width: 768px) {
+    .step_img {
+        flex-direction: column;
 
+    }
+
+    .step-map_img {
+       flex-direction: column;
+    }
+}

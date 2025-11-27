@@ -10,7 +10,7 @@ body {
 }
 
 .collection-slider img {
-    /* margin: 0 auto; */
+    margin: 0 auto;
     border-radius: 15px;
     box-shadow: 4px 4px 10px 4px rgba(0, 0, 0, 0.3);
 }
@@ -76,14 +76,6 @@ body {
 }
 
 @media (max-width: 768px) {
-
-.wrapper-collection {
-        /* ★修正1: max-widthを解除またはモバイルの最大幅に変更 */
-        max-width: 100%; /* または max-width: 768px; */
-        
-      
-        /* もし .wrapper にも max-width があれば、それも同様に解除が必要な場合があります */
-    }
 
     .view-more-btn a {
         padding: 6px 45px;

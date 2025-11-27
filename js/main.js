@@ -79,7 +79,7 @@ $(function () {
   /*=================================================
   受講生の声、作品集スライダー
   ===================================================*/
-  // 受講生の声
+// 受講生の声
   $(".voice-slider").slick({
     arrows: true,
     prevArrow: '<button type="button" class="slide-arrow prev-arrow"><span class="slide-arrow__arrow prev-arrow__arrow"></span></button>',
@@ -106,7 +106,8 @@ $(function () {
   // 作品集
   $(".collection-slider").slick({
     arrows: false,
-    centerMode: false,
+    centerMode: true,
+    centerPadding: "0px",
     slidesToShow: 4,
     autoplay: true,
     autoplaySpeed: 3000,
@@ -114,7 +115,6 @@ $(function () {
       {
         breakpoint: 768,
         settings: {
-          centerMode: true,
           centerPadding: "50px",
           slidesToShow: 1,
           // centerPaddingとslidesToShowの値が変更され、中央余白が"50px"に、表示されるスライドの数が1になります。
@@ -166,55 +166,55 @@ $(function () {
   /*=================================================
   プロナビの強み
   ===================================================*/
-  const openBtns = document.querySelectorAll('.sp-btn');
-  const pages = document.querySelectorAll('.page-modal');
-  const modalBg = document.getElementById('modal-bg');
+const openBtns = document.querySelectorAll('.sp-btn');
+const pages = document.querySelectorAll('.page-modal');
+const modalBg = document.getElementById('modal-bg');
 
-  // モーダルを開く
-  openBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const target = btn.dataset.target;
+// モーダルを開く
+openBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const target = btn.dataset.target;
 
-      // 背景有効化
-      modalBg.style.display = 'block';
+    // 背景有効化
+    modalBg.style.display = 'block';
 
-      // 背景クリックで閉じる
-      modalBg.onclick = closeAll;
+    // 背景クリックで閉じる
+    modalBg.onclick = closeAll;
 
-      // 全ページ非表示
-      pages.forEach(p => {
-        p.classList.remove('show');
-        p.style.display = 'none';
-      });
-
-      // 対象ページ表示
-      const page = document.getElementById(target);
-      page.style.display = 'block';
-      setTimeout(() => page.classList.add('show'), 10);
-    });
-  });
-
-  // ×で閉じる
-  document.querySelectorAll('.close-btn').forEach(btn => {
-    btn.addEventListener('click', closeAll);
-  });
-
-  // 閉じる処理
-  function closeAll() {
-    modalBg.style.display = 'none';
+    // 全ページ非表示
     pages.forEach(p => {
       p.classList.remove('show');
       p.style.display = 'none';
     });
-  }
 
+    // 対象ページ表示
+    const page = document.getElementById(target);
+    page.style.display = 'block';
+    setTimeout(() => page.classList.add('show'), 10);
+  });
+});
 
+// ×で閉じる
+document.querySelectorAll('.close-btn').forEach(btn => {
+  btn.addEventListener('click', closeAll);
+});
+
+// 閉じる処理
+function closeAll() {
+  modalBg.style.display = 'none';
+  pages.forEach(p => {
+    p.classList.remove('show');
+    p.style.display = 'none';
+  });
+}
+
+  
   /*=================================================
   アコーディオンメニュー
   ===================================================*/
-  $(function () {
-    $('.list-question').on('click', function () {
-      $(this).next('.list-answer').slideToggle(200);
+  $(function() {
+    $('.list-question').on('click', function() {
+        $(this).next('.list-answer').slideToggle(200);
     });
   });
 
