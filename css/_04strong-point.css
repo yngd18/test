@@ -1,7 +1,7 @@
-.wrapper{
+/* .wrapper{
     max-width: 954px;
     width: 100%;
-}
+} */
 
 .section-title{
     font-size: 3.0rem;
@@ -69,14 +69,42 @@ sp-list
     margin: 0 auto;
 }
 
-.sp-single .sp-btn{
-    width: 60%;
-    border-radius: 20px;
+.sp-btn{
+    display: inline-block;
     margin: 0 auto;
+    width: 60%;
+    padding-inline: 10px;
     background: linear-gradient(to right, #70B8EE, #497BA1);
     color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+    transition: .3s;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.35);
 }
 
+.sp-btn:hover {
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+/*=================================================
+強み専用ページ＿共通
+===================================================*/
+.page-modal,
+.page-modal-img {
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+body.modal-open {
+    overflow: hidden;
+}
 
 
 /*=================================================
@@ -90,10 +118,9 @@ sp-list
     height: 100vh;
     background: rgba(0,0,0,0.4);
     display: none;
-    z-index: 999; /* 最前面の一歩手前 */
+    z-index: 999;
 }
 
-/* 白い中央ページ */
 .page-modal {
     position: fixed;
     top: 50%;
@@ -105,19 +132,17 @@ sp-list
     border-radius: 14px;
     transform: translate(-50%, -50%) scale(0.9);
     display: none;
-    z-index: 1000; /* 背景より前 */
+    z-index: 1000;
     transition: transform .25s ease, opacity .25s ease;
     opacity: 0;
 }
 
-/* 表示状態 */
 .page-modal.show {
     transform: translate(-50%, -50%) scale(1);
     opacity: 1;
     display: block;
 }
 
-/* ×ボタン */
 .close-btn {
     position: absolute;
     top: 12px;
@@ -143,7 +168,7 @@ sp-list
 .page-modal .text{
     font-size: 3.0rem;
     font-weight: bold;
-    margin-bottom: 50px;
+    margin-bottom: 25px;
     position: relative;
 }
 
@@ -197,6 +222,112 @@ sp-list
     padding: 15px 20px;
     text-align: left;
 }
+
+/*=================================================
+強み専用ページ＿page5page6表示ボタン
+===================================================*/
+.small-page-img-animation{
+    display: inline-block;
+    margin-bottom: 25px;
+}
+.small-page-img {
+    display: block;
+    width: 400px;
+    height: 40px;
+    font-size: 2.0rem;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.35);
+    line-height: 40px;
+    text-decoration: none;
+    background: linear-gradient(to right, #70B8EE, #497BA1);
+    color: white;
+    text-align: center;
+    border-radius: 78px;
+    animation: btn_animation 1s infinite;
+}
+@keyframes small-page-img-animation {
+    0% {
+        transform: scale(1, 0.8);
+    }
+    20% {
+        transform: scale(0.8, 1.1);
+    }
+    95% {
+        transform: scale(1, 1);
+    }
+    100% {
+        transform: scale(1, 0.8);
+    }
+}
+
+/*=================================================
+強み専用ページ＿page5page6
+===================================================*/
+.page-modal-img {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    max-width: 900px;
+    background: #fff;
+    padding: 40px;
+    border-radius: 14px;
+    transform: translate(-50%, -50%) scale(0.9);
+    display: none;
+    z-index: 1000;
+    transition: transform .25s ease, opacity .25s ease;
+    opacity: 0;
+}
+.page-modal-img.show {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+    display: block;
+}
+
+.page-modal-img .number{
+    font-size: 4.0rem;
+    font-weight: bold;
+    color: #497BA1;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+
+.page-modal-img .text{
+    font-size: 3.0rem;
+    font-weight: bold;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.page-modal-img .text::before {
+    width: 80px;
+    height: 0.4rem;
+    content: "";
+    position: absolute;
+    text-align: center;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #497BA1;
+}
+
+.small-page-img-img{
+    display: grid;
+    grid-template-columns: repeat(2,2fr);
+    gap: 50px;
+}
+
+.small-content-img{
+    box-shadow: 0 0 8px black;
+    border-radius: 20px;
+}
+
+.small-content-img img{
+    width: 100%;
+    border-radius: 20px;
+    vertical-align: bottom;
+}
+
 
 
 /*=================================================

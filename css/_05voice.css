@@ -31,6 +31,10 @@
     box-shadow: 4px 4px 10px 4px rgba(0, 0, 0, 0.3);
 }
 
+.js-slick-content {
+    position: relative;
+}
+
 .voice-slider .slick-slide {
     margin: 0 15px;
 }
@@ -47,12 +51,10 @@
 
 .voice-text p:first-of-type {
     margin-bottom: 15px;
+    margin-bottom: 7px;
     text-align: center;
     font-weight: bold;
     font-size: 2rem;
-}
-
-.voice-text p:last-of-type {
     line-height: 1.5;
 }
 
@@ -66,28 +68,25 @@
     border-radius: 15px;
     background-color: #FEE688;
     font-size: 1.4rem;
+    text-align: right;
+    margin-bottom: 7px;
 }
 
 .voice-info span:last-of-type {
     background-color: #9AB2D4;
 }
 
-.js-slick-content {
-    position: relative;
-}
 
-.voice-slider .slick-slide.slick-center .voice-item {
+ .voice-slider .slick-slide.slick-center .voice-item {
     transform: scale(1);
     opacity: 1;
-
 }
-
-/* .slick-center .voice-item {
-    position: relative;
-} */
 
 
 /* slick矢印カスタマイズ */
+.slick-center .voice-item {
+    position: relative;
+}
 .prev-arrow,
 .next-arrow {
     width: 55px;
@@ -131,7 +130,6 @@
 
 .prev-arrow::before {
     transform: translate(-40%, -50%) rotate(-135deg);
-
 }
 
 @media (max-width: 768px) {
@@ -141,8 +139,8 @@
     }
 
     .next-arrow {
-    left: 85%;
-    
-   
-}
+        left: 85%;
+    }
+
+
 }

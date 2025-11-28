@@ -26,7 +26,6 @@
 }
 
 .about-container img {
-    width: 100%;
     max-width: 45%;
 }
 
@@ -63,6 +62,7 @@
 /* レスポンシブ */
 @media(width:440px) {
     .about-container {
+        display: flex;
         flex-direction: column;
     }
 }

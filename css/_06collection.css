@@ -67,7 +67,6 @@ body {
         left: 140%;
         opacity: 0;
     }
-
 }
 
 .wave-bottom {
@@ -77,6 +76,13 @@ body {
 
 @media (max-width: 768px) {
 
+.wrapper-collection {
+        /* ★修正1: max-widthを解除またはモバイルの最大幅に変更 */
+        max-width: 100%; /* または max-width: 768px; */
+        
+        /* もし .wrapper にも max-width があれば、それも同様に解除が必要な場合があります */
+    }
+
     .view-more-btn a {
         padding: 6px 45px;
         border-radius: 15px;
@@ -84,7 +90,5 @@ body {
         background: linear-gradient(to right, #70B8EE, #497BA1);
         box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
     }
-
-
 
 }

@@ -1,5 +1,9 @@
 @charset "UTF-8";
 
+.flow {
+    margin-bottom: 160px;
+}
+
 .wrapper {
     max-width: 954px;
     margin: 0 auto;
@@ -25,11 +29,17 @@
     transform: translateX(-50%);
 }
 
+.first-text , .forth-text {
+    top: 25%;
+}
+
 .flow-text span {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     margin-bottom: 5px;
 
 }
+
+
 
 .odd-number {
     transform: translateX(-30%);
@@ -39,6 +49,8 @@
     transform: translateX(25%);
 }
 
+
+/* 風船アニメーション */
 .flow-items:nth-child(1) .flow-item:nth-child(1) {
     animation: float1 4.5s ease-in-out infinite;
 }
@@ -147,6 +159,10 @@
     }
 }
 
+
+/* ーーーーーーーーーーーーーーーーーーーーーーーーー
+レスポンシブ
+ーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
 @media (max-width: 768px) {
     .wrapper {
         padding-inline: 3%;

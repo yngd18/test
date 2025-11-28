@@ -57,3 +57,25 @@
     bottom: 0;
     left: -45px;
 }
+
+/* アコーディオン_矢印 */
+.list-question {
+    position: relative;
+    cursor: pointer;
+    padding-right: 30px;
+}
+.list-question::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid #333;
+    border-bottom: 2px solid #333;
+    transform: translateY(-50%) rotate(45deg);
+    transition: transform 0.3s;
+}
+.list-question.active::after {
+    transform: translateY(-50%) rotate(-135deg);
+}

@@ -36,7 +36,7 @@
         <div class="header-logo">
             <h1><img src="img/logo.png" alt="PRONAVIロゴ"></h1>
         </div>
-        <nav class="header-right">
+        <nav class="nav-menu">
             <ul>
                 <li><a href="#about">プロナビとは</a></li>
                 <li><a href="#strong-point">プロナビの強み</a></li>
@@ -47,6 +47,7 @@
                 <li><a href="#company">会社概要</a></li>
             </ul>
         </nav>
+
         <div class="toggle-btn">
             <span></span>
             <span></span>
@@ -55,8 +56,20 @@
 
     </header>
 
+    <div id="fv-animation">
+        <img src="img/logo.png" alt="logo" class="fv-logo">
+        <div class="fv-white"></div>
+    </div>
 
     <main>
+        <div class="mainvisual">
+            <div class="text">
+                <p>変わりたいと<br>
+                思った瞬間が変われるとき。</p>
+            </div>
+            <img src="img/mainvisual.png" alt="mainvisual">
+        </div>
+
         <section id="about" class="about">
             <div class="section-title">
                 <div class="section-title">プロナビとは</div>
@@ -92,14 +105,13 @@
                         <div class="emblem-text">
                             <p>信頼の実績が<br>
                                 あなたの挑戦を支えます</p>
-
                         </div>
-                    </div>
-
+                    </div>        
                 </div>
             </div>
 
         </section>
+
 
 
         <section id="strong-point" class="strong-point">
@@ -133,7 +145,7 @@
                         <button class="sp-btn" data-target="page4">詳しく見る→</button>
                     </li>
                 </ul>
-                <!-- 専用ページ -->
+<!--///// 専用ページ4枚 ここから/////-->
                 <div id="modal-bg"></div>
 
                 <div class="page-modal" id="page1">
@@ -167,6 +179,9 @@
                     <button class="close-btn">×</button>
                     <p class="number">02</p>
                     <p class="text">作業会</p>
+                    <div class="small-page-img-animation">
+                        <button class="small-page-img" data-target="page5">→作業会の様子はこちら←</button>
+                    </div>
                     <div class="small-page">
                         <div class="small-content">
                             <h4>作業会</h4>
@@ -195,6 +210,9 @@
                     <button class="close-btn">×</button>
                     <p class="number">03</p>
                     <p class="text">イベント</p>
+                    <div class="small-page-img-animation">
+                        <button class="small-page-img" data-target="page6">→イベントの様子はこちら←</button>
+                    </div>
                     <div class="small-page">
                         <div class="small-content">
                             <h4>オフ会</h4>
@@ -248,10 +266,47 @@
                         </div>
                     </div>
                 </div>
-
-
-
-                <!-- 専用ページ -->
+<!--///// 専用ページ4枚 ここまで /////-->
+<!--///// imgページ2枚 ここから /////-->
+                <div class="page-modal-img" id="page5">
+                    <button class="close-btn">×</button>
+                    <p class="number">ex</p>
+                    <p class="text">作業会の様子</p>
+                    <div class="small-page-img-img">
+                        <div class="small-content-img">
+                            <img src="img/work1.png" alt="work1">
+                        </div>
+                        <div class="small-content-img">
+                            <img src="img/work2.png" alt="work2">
+                        </div>
+                        <div class="small-content-img">
+                            <img src="img/work3.png" alt="work3">
+                        </div>
+                        <div class="small-content-img">
+                            <img src="img/work4.png" alt="work4">
+                        </div>
+                    </div>
+                </div>
+                <div class="page-modal-img" id="page6">
+                    <button class="close-btn">×</button>
+                    <p class="number">ex</p>
+                    <p class="text">イベントの様子</p>
+                    <div class="small-page-img-img">
+                        <div class="small-content-img">
+                            <img src="img/event1.png" alt="event1">
+                        </div>
+                        <div class="small-content-img">
+                            <img src="img/event2.png" alt="event2">
+                        </div>
+                        <div class="small-content-img">
+                            <img src="img/event3.png" alt="event3">
+                        </div>
+                        <div class="small-content-img">
+                            <img src="img/event4.png" alt="event4">
+                        </div>
+                    </div>
+                </div>
+<!--///// imgページ2枚 ここまで /////-->
                 <div class="sp-apply">
                     <a href="#" class="contact-btn">無料カウンセリングを申し込む</a>
                 </div>
@@ -268,7 +323,7 @@
 
 
         <img src="img/wave-top.png" alt="wave-top" class="wave-top">
-        <section id="voice" class="voice">
+        <section class="voice" id="voice">
             <div class="wrapper-voice">
                 <h2 class="section-title">受講者の声</h2>
                 <div class="voice-slider">
@@ -324,7 +379,7 @@
                         </div>
                     </div>
                     <div class="voice-item">
-                        <img src="img/voice1.png">
+                        <img src="img/voice5.png">
                         <div class="voice-text">
                             <p>家族との時間を増やすために</p>
                             <div class="voice-info">
@@ -358,16 +413,16 @@
         <img src="img/wave-bottom.png" alt="" class="wave-bottom">
 
 
-        <section class="flow">
+        <section id="flow" class="flow">
             <h2 class="section-title">受講の流れ</h2>
             <div class="wrapper">
                 <div class="flow-inner">
                     <div class="flow-items">
                         <div class="flow-item odd-number">
                             <img src="img/flow1.png" alt="flow1" class="flow-img">
-                            <div class="flow-text">
+                            <div class="flow-text first-text">
                                 <span>面談</span>
-                                <span>入校 / 手続き</span>
+                                <span>入校/手続き</span>
                                 <span>目標設定</span>
                             </div>
                         </div>
@@ -388,7 +443,7 @@
                         </div>
                         <div class="flow-item even-number">
                             <img src="img/flow4.png" alt="flow1" class="flow-img">
-                            <div class="flow-text">
+                            <div class="flow-text forth-text">
                                 <span>WordPress</span>
                                 <span>オリジナルサイト制作</span>
                             </div>
@@ -410,7 +465,6 @@
                     </div>
                 </div>
             </div>
-
         </section>
 
         <section class="step wrapper" id="step">
@@ -424,21 +478,45 @@
                 <p>安心してご相談いただけるよう、無理な勧誘は一切行っていません。</p>
             </div>
 
-            <div class="step_img">
-                <img src="img/step1.png" alt="">
-                <img src="img/step2.png" alt="">
-                <img src="img/step3.png" alt="">
-                <img src="img/step4.png" alt="">
-            </div>
+            <div class="step-content">
+                <div class="step-inner">
+                    <div class="step-box">
+                        <img src="img/step1.png" class="step-img" alt="">
+                        <img src="img/Line.png" class="line" alt="">
+                    </div>
+                    <div class="map-icon">
+                        <img src="img/step-map1.png" class="step-map" alt="">
+                    </div>
+                </div>
 
-            <div class="step-map_img">
-                <img src="img/step-map1.png" class="map-number" alt="">
-                <img src="img/Line.png" class="map-line" alt="">
-                <img src="img/step-map2.png" class="map-number" alt="">
-                <img src="img/Line.png" class="map-line" alt="">
-                <img src="img/step-map3.png" class="map-number" alt="">
-                <img src="img/Line.png" class="map-line" alt="">
-                <img src="img/step-map4.png" class="map-number" alt="">
+                <div class="step-inner">
+                    <div class="step-box">
+                        <img src="img/step2.png" class="step-img" alt="">
+                        <img src="img/Line.png" class="line" alt="">
+                    </div>
+                    <div class="map-icon">
+                        <img src="img/step-map2.png" class="step-map" alt="">
+                    </div>
+                </div>
+
+                <div class="step-inner">
+                    <div class="step-box">
+                        <img src="img/step3.png" class="step-img" alt="">
+                        <img src="img/Line.png" class="line" alt="">
+                    </div>
+                    <div class="map-icon">
+                        <img src="img/step-map3.png" class="step-map" alt="">
+                    </div>
+                </div>
+
+                <div class="step-inner">
+                    <div class="step-box">
+                        <img src="img/step4.png" class="step-img" alt="">
+                    </div>
+                    <div class="map-icon">
+                        <img src="img/step-map4.png" class="step-map" alt="">
+                    </div>
+                </div>
             </div>
 
             <div class="btn-inner">
@@ -446,8 +524,19 @@
                     <a href="" class="btn">無料カウンセリングを申し込む</a>
                 </div>
             </div>
+
+
         </section>
 
+        <section id="price" class="price">
+            <h2 class="section-title">料金</h2>
+
+            <div class="price-text">
+                <p>6ヵ月集中プログラム</p>
+                <p><span>総額</span>550,000円<span>（税込）</span></p>
+            </div>
+
+        </section>
 
 
 
@@ -498,48 +587,97 @@
         </section>
 
 
+
+        <section id="company" class="company">
+            <h2 class="section-title">会社概要</h2>
+
+            <div class="company-inner wrapper">
+                <dl>
+                    <dt>社名</dt>
+                    <dd>株式会社NOE<br>
+                        NOE Co.,Ltd</dd>
+
+                    <dt>所在地</dt>
+                    <dd>&#12306;460-0002<br>
+                        愛知県名古屋市中区丸の内3丁目15-22<br>
+                        丸の内Usビル801号室</dd>
+
+                    <dt>代表者名</dt>
+                    <dd>加藤 大騎</dd>
+
+                    <dt>設立</dt>
+                    <dd>2023年1月26日</dd>
+
+                    <dt>事業内容</dt>
+                    <dd>
+                        <h3>プログラミングスクール事業<br>
+                            システム・アプリ開発</h3>
+                    </dd>
+                </dl>
+
+                <div class="map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1371.1960754700585!2d136.90359822248058!3d35.17476619000111!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6003712b29048303%3A0x4d32fd4e42e4114d!2z44CSNDYwLTAwMDIg5oSb55-l55yM5ZCN5Y-k5bGL5biC5Lit5Yy65Li444Gu5YaF77yT5LiB55uu77yR77yV4oiS77yS77yS!5e0!3m2!1sja!2sjp!4v1764166024538!5m2!1sja!2sjp"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
     </main>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <footer>
+        <div class="footer-box wrapper">
+            <div class="footer-left">
+                <img src="img/logo.png" alt="PRONAVIロゴ">
+                <nav>
+                    <ul>
+                        <a href="#about">
+                            <li>プロナビとは</li>
+                        </a>
+                        <a href="#strong-point">
+                            <li>プロナビの強み</li>
+                        </a>
+                        <a href="#voice">
+                            <li>受講生の声</li>
+                        </a>
+                        <a href="#flow">
+                            <li>受講の流れ</li>
+                        </a>
+                        <a href="#price">
+                            <li>料金/期間</li>
+                        </a>
+                        <a href="#question">
+                            <li>よくある質問</li>
+                        </a>
+                        <a href="#company">
+                            <li>会社概要</li>
+                        </a>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="footer-right">
+                <p>各種SNS</p>
+                <div class="container">
+                    <div class="content-1">
+                        <img src="img/Instagram1.png" alt="Instagramアイコン">
+                        <p>かかし</p>
+                    </div>
+                    <div class="content-2">
+                        <img src="img/Instagram2.png" alt="Instagramアイコン">
+                        <p>いるか</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+            <small>&copy; 2025 Jane Doe</small>
+        </div>
+        <a href="#" class="cta-btn">無料 <br>カウンセリングを <br>予約する</a>
     </footer>
-
-
 
     <!-- プラグイン「slick」のjsを読み込む -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

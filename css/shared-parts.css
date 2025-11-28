@@ -24,11 +24,10 @@ ul {
     list-style: none;
 }
 
-/* .wrapper {
+.wrapper {
     max-width: 954px;
     margin: 0 auto;
 }
- */
 
 /* コンタクトボタン（hover) */
 .contact-btn {

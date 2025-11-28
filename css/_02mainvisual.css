@@ -1,0 +1,98 @@
+/*=========================================================
+fv-animation
+mainvisual
+==========================================================*/
+.mainvisual{
+    position: relative;
+}
+
+.mainvisual .text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    font-size: 5.0rem;
+}
+
+.mainvisual img{
+    height: 100vh;
+    width: 100%;
+}
+
+/*============================
+ファーストビューanimation
+=============================*/
+#fv-animation{
+    position: fixed;
+    inset: 0;
+    background: #ffffff;
+    z-index: 9999;
+    overflow: hidden;
+}
+
+.fv-logo{
+    position: absolute;
+    width: 300px;
+    opacity: 1;
+    animation: logo-move 5.5s ease-in-out forwards;
+}
+
+.fv-white{
+    position: absolute;
+    inset: 0;
+    background: white;
+    opacity: 0;
+    animation: fv-whiteout 1s ease forwards;
+    animation-delay: 5.4s;
+}
+
+.mainvisual{
+    opacity: 0;
+    filter: blur(20px) brightness(1.4);
+    transform: scale(1.05);
+    animation: mv-fadein 2.5s ease forwards;
+    animation-delay: 6.0s;
+}
+
+@keyframes logo-move {
+    0% { 
+        top: 5%; 
+        left: 95%; 
+        transform: translate(-100%,0) scale(1); 
+        opacity: 1;
+    }
+    20% { top: 95%; left: 95%; transform: translate(-100%,-100%) scale(1); opacity: 1; }
+    40% { top: 95%; left: 5%;  transform: translate(0,-100%) scale(1); opacity: 1; }
+    60% { top: 5%;  left: 5%;  transform: translate(0,0) scale(1); opacity: 1; }
+    75% { 
+        top: 50%; 
+        left: 50%; 
+        transform: translate(-50%, -50%) scale(1); 
+        opacity: 1; 
+    }
+    100% {
+        top: 50%; 
+        left: 50%;
+        transform: translate(-50%, -50%) scale(15);
+        opacity: 0;
+    }
+}
+
+@keyframes fv-whiteout {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes mv-fadein {
+    0% {
+        opacity: 0;
+        filter: blur(20px) brightness(1.4);
+        transform: scale(1.05);
+    }
+    100% {
+        opacity: 1;
+        filter: blur(0) brightness(1);
+        transform: scale(1);
+    }
+}
